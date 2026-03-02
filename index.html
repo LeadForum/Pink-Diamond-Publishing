@@ -379,6 +379,79 @@
       0% { left: -100%; }
       100% { left: 100%; }
     }
+    /* ── Book Cards ── */
+    .books-section {
+      width: 100%;
+      margin: 20px 0 30px;
+      animation: fadeUp 1s 0.7s ease both;
+      opacity: 0;
+    }
+    .books-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    .book-card {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+    .book-card:hover {
+      background: rgba(201,168,76,0.08);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,168,76,0.15);
+    }
+    .book-cover {
+      width: 80px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .book-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .book-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .book-series {
+      font-family: "Cinzel", serif;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .book-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #1a1a1a;
+      font-family: "Cinzel", serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      border-radius: 4px;
+      width: fit-content;
+    }
   </style>
 </head>
 <body>
@@ -413,11 +486,28 @@
     <button class="pill">Digital Content</button>
   </div>
 
-  <div class="cta-label">Shop Our Current Catalog</div>
-  <a class="amazon-btn" href="https://a.co/d/00fk2hmw" target="_blank" rel="noopener noreferrer">
-    
-    <span>Browse on Amazon</span>
-  </a>
+  <div class="cta-label">The Little Heroes of America Collection</div>
+  <div class="books-section">
+    <div class="books-grid">
+      <a class="book-card" href="https://www.amazon.com/s?k=Pink+Diamond+Publishing" target="_blank" rel="noopener noreferrer">
+        <img class="book-cover" src="https://m.media-amazon.com/images/I/71jL-C2gCvL._SY466_.jpg" alt="Sergeant Sam book cover"/>
+        <div class="book-info">
+          <div class="book-series">Book 1</div>
+          <div class="book-title">Sergeant Sam: A Story of Courage, Dreams &amp; Service</div>
+          <span class="book-btn">Buy on Amazon</span>
+        </div>
+      </a>
+      <a class="book-card" href="https://www.amazon.com/dp/B0GQPYYFLD" target="_blank" rel="noopener noreferrer">
+        <img class="book-cover" src="https://m.media-amazon.com/images/I/71rWz+pJURL._SY466_.jpg" alt="Little Airman Ava book cover"/>
+        <div class="book-info">
+          <div class="book-series">Book 2</div>
+          <div class="book-title">Little Airman Ava: A Story of Courage, Dreams &amp; Soaring High</div>
+          <span class="book-btn">Buy on Amazon</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
 
   <div class="notify-label">Get Notified When We Launch</div>
   <div class="email-row">
